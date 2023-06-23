@@ -1,0 +1,37 @@
+#menu-icon{
+    display : block;
+}
+
+.nav{
+    position : absolute;
+    top:100%;
+    left :-100;
+    width : 100%;
+    padding : 1rem 4%;
+    background : var(--bg-color);
+    box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
+    transition : .25s ease;
+    transition-delay:.25s;
+}
+
+.nav .active{
+left : 0;
+transition-delay:0s;
+}
+
+.nav a {
+    display:block;
+    font-size : 2rem;
+    margin : 3rem 0;
+
+}
+
+JS for menu button
+
+let menuIcon = document.querySelector('#menu-icon');
+let nav = document.querySelector('.nav');
+
+menuIcon.onclick = ()=>{
+    menuIcon.classList.toggle('bx-x');
+    nav.classList.toggle('active');
+}
