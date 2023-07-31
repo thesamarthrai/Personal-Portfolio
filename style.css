@@ -763,15 +763,213 @@ width: 100%;
 
 /* Media Queries */
 
+/* @media (max-width : 1200px){
+    html{
+    font-size: 55%;
+    }
+}
+
+@media (max-width : 991px){
+    .header{
+        padding: 2rem 4%;
+    }
+
+    section{
+        padding :  10rem 4% 2rem;
+    }
+
+    .home {
+        padding : 0 4%;
+    }
+
+    .footer{
+        padding : 2rem 4%;
+    }
+}
+
+@media (max-width : 768px){
+    .header{
+        background: var(--bg-color);
+    }
+      #menu-icon{
+        display : block;
+      }
+
+      .nav{
+        position: absolute;
+        top : 100%;
+        left : -100%;
+        width : 100%;
+        padding : 1rem 4%;
+        background: transparent;
+        color: wheat;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+        transition: .25s ease;
+        transition-delay: .25s;
+      }
+
+      .nav .active{
+        left : 0;
+        transition-delay: 0s;
+      }
+
+      .nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+      }
+} */
+
+@media (max-width : 1440px){
+    html{
+    font-size: 65%;
+    }
+    #back-avtar {
+    bottom: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    width: 37rem;
+    left: 84rem;
+    bottom: 7rem;
+
+    }
+}
+
+@media (max-width:1258px){
+    #back-avtar{
+        border-radius: 50%;
+    position: absolute;
+    width: 29rem;
+    left: 79rem;
+    bottom: 7rem;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        color: black;
+        font-weight: 600;
+        position: relative;
+        right: 6rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+@media (max-width:1132px){
+    .logo {
+        font-size: 2.5rem;
+        color: black;
+        font-weight: 600;
+        position: relative;
+        right: 8rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #back-avtar{
+        border-radius: 50%;
+    position: absolute;
+    width: 25rem;
+    left: 73rem;
+    bottom: 13rem;
+    }
+
+    #menu-icon{
+        display : block;
+    }
+    
+    .nav{
+        position : absolute;
+        top:100%;
+        left :-100%;
+        width : 100%;
+        padding : 1rem 4%;
+        background : rgb(16, 203, 231);
+        box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
+        transition : .25s ease;
+        transition-delay:.25s;
+    }
+    
+    .nav .active{
+    left : 0;
+    transition-delay:0s;
+    }
+    
+    .nav a {
+        display:block;
+        font-size : 2rem;
+        margin : 3rem 0;
+    
+    }
+}
+
+@media (max-width:1020px){
+    #back-avtar{
+        bottom: 14rem;
+        border-radius: 50%;
+        position: absolute;
+        width: 18rem;
+        left: 71rem;
+        }
+
+}
+
+
 @media (max-width:998px) {
     html {
         font-size: 55%;
     }
+    #back-avtar {
+        bottom: 14rem;
+        border-radius: 50%;
+        position: absolute;
+        width: 21rem;
+        left: 71rem;
+    }
+
+    #menu-icon{
+        display : block;
+    }
+    
+    .nav{
+        position : absolute;
+        top:100%;
+        left :-100%;
+        width : 100%;
+        padding : 1rem 4%;
+        background : rgb(16, 203, 231);
+        box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
+        transition : .25s ease;
+        transition-delay:.25s;
+    }
+    
+    .nav .active{
+    left : 0;
+    transition-delay:0s;
+    }
 }
+
+
+@media (max-width:810px){
+#back-avtar {
+    bottom: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    width: 21rem;
+    left: 49rem;
+}
+}
+
 
 @media (max-width:768px) {
     html {
         font-size: 45%;
+    }
+    #back-avtar {
+    bottom: 11rem;
+    border-radius: 50%;
+    position: absolute;
+    width: 22rem;
+    left: 62rem;
     }
     #menu-icon{
         display : block;
@@ -802,6 +1000,43 @@ width: 100%;
     }
 }
 
+@media(max-width:615px){
+    .home{
+            display: flex;
+    align-items: center;
+    padding: 0 9%;
+    position: relative;
+    top: -15.6rem;
+
+    }
+
+    .logo {
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 600;
+    position: relative;
+    right: 0rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.icons {
+    position: absolute;
+    bottom: -10rem;
+    width: 244px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#back-avtar {
+    bottom: -2rem;
+    border-radius: 50%;
+    position: absolute;
+    width: 22rem;
+    left: 20rem;
+}
+
+}
+
 @media (max-width:462px) {
     html {
         font-size: 35%;
@@ -809,6 +1044,14 @@ width: 100%;
     #menu-icon{
         display : block;
     }
+
+    #back-avtar {
+    bottom: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    width: 22rem;
+    left: 20rem;
+}
     
     .nav{
         position : absolute;
@@ -855,6 +1098,22 @@ width: 100%;
         transition : .25s ease;
         transition-delay:.25s;
     }
+
+    .home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    position: relative;
+    top: -43.6rem;
+}
+#back-avtar {
+    bottom: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    width: 32rem;
+    left: 20rem;
+}
+
     
     .nav .active{
     left : 0;
