@@ -34,8 +34,8 @@ body{
 
 .header{
     position : fixed;
-    top: 0px;
-    left:0px;
+    top: 0;
+    left:0;
     width: 100%;
     padding: 2rem 9%;
     background-color: #00abf0;
@@ -76,7 +76,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.nav a{
+.navbar a{
     font-size: 1.7rem;
     color:black;
     font-weight: 500;
@@ -85,8 +85,8 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.nav a:hover,
-.nav a.active{
+.navbar a:hover,
+.navbar a.active{
     color: white;
 }
 
@@ -795,7 +795,7 @@ width: 100%;
         display : block;
       }
 
-      .nav{
+      .navbar{
         position: absolute;
         top : 100%;
         left : -100%;
@@ -808,12 +808,12 @@ width: 100%;
         transition-delay: .25s;
       }
 
-      .nav .active{
+      .navbar .active{
         left : 0;
         transition-delay: 0s;
       }
 
-      .nav a{
+      .navbar a{
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
@@ -877,24 +877,25 @@ width: 100%;
         display : block;
     }
     
-    .nav{
+    .navbar {
         position : absolute;
         top:100%;
-        left :-100%;
+        left :0;
         width : 100%;
-        padding : 1rem 4%;
+        padding : 1rem 3%;
         background : rgb(16, 203, 231);
+        border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
         transition : .25s ease;
         transition-delay:.25s;
+        display: none;
     }
     
-    .nav .active{
-    left : 0;
-    transition-delay:0s;
+    .navbar.active{
+    display: block;
     }
     
-    .nav a {
+    .navbar a {
         display:block;
         font-size : 2rem;
         margin : 3rem 0;
@@ -930,21 +931,28 @@ width: 100%;
         display : block;
     }
     
-    .nav{
+    .navbar{
         position : absolute;
         top:100%;
-        left :-100%;
+        left :0;
         width : 100%;
-        padding : 1rem 4%;
+        padding : 1rem 3%;
         background : rgb(16, 203, 231);
+        border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
         transition : .25s ease;
         transition-delay:.25s;
+        display: none;
     }
     
-    .nav .active{
-    left : 0;
-    transition-delay:0s;
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .navbar.active{
+    display: block;
     }
 }
 
@@ -975,29 +983,29 @@ width: 100%;
         display : block;
     }
     
-    .nav{
+    .navbar{
         position : absolute;
         top:100%;
-        left :-100%;
+        left :0;
         width : 100%;
-        padding : 1rem 4%;
+        padding : 1rem 3%;
         background : rgb(16, 203, 231);
-        box-shadow : 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
         transition : .25s ease;
         transition-delay:.25s;
     }
     
-    .nav .active{
-    left : 0;
-    transition-delay:0s;
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
     }
     
-    .nav a {
-        display:block;
-        font-size : 2rem;
-        margin : 3rem 0;
-    
+    .navbar.active{
+        display: block;
     }
+    
 }
 
 @media(max-width:615px){
@@ -1053,29 +1061,29 @@ width: 100%;
     left: 20rem;
 }
     
-    .nav{
-        position : absolute;
-        top:100%;
-        left :-100%;
-        width : 100%;
-        padding : 1rem 4%;
-        background : rgb(16, 203, 231);
-        box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
-        transition : .25s ease;
-        transition-delay:.25s;
+.navbar{
+    position : absolute;
+    top:100%;
+    left :0;
+    width : 100%;
+    padding : 1rem 3%;
+    background : rgb(16, 203, 231);
+    border-top: .1rem solid rgba(0,0,0,.2);
+    box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
+    transition : .25s ease;
+    transition-delay:.25s;
+}
+
+.navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+    
+    .navbar.active{
+        display: block;
     }
     
-    .nav .active{
-    left : 0;
-    transition-delay:0s;
-    }
-    
-    .nav a {
-        display:block;
-        font-size : 2rem;
-        margin : 3rem 0;
-    
-    }
 }
 
 @media (max-width:375px) {
@@ -1087,16 +1095,23 @@ width: 100%;
         display : block;
     }
     
-    .nav{
+    .navbar{
         position : absolute;
         top:100%;
-        left :-100%;
+        left :0;
         width : 100%;
-        padding : 1rem 4%;
-        background : rgb(16, 203, 231);
-        box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
+        padding : 1rem 3%;
+        background : var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow : 0 .5rem 1rem rgba(0, 0, 0, .2);
         transition : .25s ease;
         transition-delay:.25s;
+    }
+    
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
     }
 
     .home {
@@ -1115,17 +1130,10 @@ width: 100%;
 }
 
     
-    .nav .active{
-    left : 0;
-    transition-delay:0s;
+    .navbar.active{
+        display: block;
     }
-    
-    .nav a {
-        display:block;
-        font-size : 2rem;
-        margin : 3rem 0;
-    
-    }
+
 }
 
 @media (max-width:360px) {
@@ -1137,27 +1145,26 @@ width: 100%;
         display : block;
     }
     
-    .nav{
+    .navbar{
         position : absolute;
         top:100%;
-        left :-100%;
+        left :0;
         width : 100%;
-        padding : 1rem 4%;
+        padding : 1rem 3%;
         background : rgb(16, 203, 231);
+        border-top: .1rem solid rgba(0,0,0,.2);
         box-shadow : 0 .5rem 1rem rgbs(0, 0, 0, .2);
         transition : .25s ease;
-        transition-delay: .25s;
+        transition-delay:.25s;
     }
     
-    .nav .active{
-    left : 0;
-    transition-delay:0s;
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
     }
     
-    .nav a {
-        display:block;
-        font-size : 2rem;
-        margin : 3rem 0;
-    
+    .navbar.active{
+        display: block;
     }
 }
