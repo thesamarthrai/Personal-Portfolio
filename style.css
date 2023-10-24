@@ -1053,10 +1053,11 @@ span {
 
     .icons {
         position: absolute;
-        bottom: -10rem;
-        width: 244px;
-        display: flex;
-        justify-content: space-between;
+    bottom: -9rem;
+    right: 23rem;
+    width: 244px;
+    display: flex;
+    justify-content: space-between;
     }
 
     #back-avtar {
@@ -1083,7 +1084,7 @@ span {
         border-radius: 50%;
         position: absolute;
         width: 22rem;
-        left: 20rem;
+        left: 26rem;
     }
 
     .navbar {
