@@ -2996,6 +2996,15 @@ span {
         display: none;
     }
 
+    .bx-play:before {
+        content: "\ebbd";
+        position: absolute;
+        top: -3px;
+        font-size: 6rem;
+        width: 0px;
+        cursor: pointer;
+    }
+
     .slide-content {
         position: absolute;
         top: 231px;
@@ -3293,6 +3302,11 @@ span {
         padding: 0 9%;
         position: relative;
         top: -45.6rem;
+    }
+
+    .bx-play:before {
+        content: "\ebbd";
+        font-size: 6rem;
     }
 }
 
