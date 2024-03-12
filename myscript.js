@@ -42,29 +42,24 @@ tl.to("body", {
 
 //Play -Pause button
 const dictationText = document.getElementById("dictation-text");
-const playButton = document.querySelector(".bx.bx-play");
-const pauseButton = document.querySelector(".bx.bx-pause");
+  const playButton = document.querySelector('.bx.bx-play');
+  const pauseButton = document.querySelector('.bx.bx-pause');
 
-let isPlaying = false;
+  let isPlaying = false;
 
-playButton.addEventListener("click", () => {
-  if (!isPlaying) {
-    responsiveVoice.speak(dictationText.textContent, {
-      pitch: 1,
-      rate: 1,
-      volume: 1,
-      voice: "Matthew",
-    });
-    isPlaying = true;
-  }
-});
+  playButton.addEventListener('click', () => {
+    if (!isPlaying) {
+      responsiveVoice.speak(dictationText.textContent);
+      isPlaying = true;
+    }
+  });
 
-pauseButton.addEventListener("click", () => {
-  if (isPlaying) {
-    responsiveVoice.pause();
-    isPlaying = false;
-  }
-});
+  pauseButton.addEventListener('click', () => {
+    if (isPlaying) {
+      responsiveVoice.pause();
+      isPlaying = false;
+    }
+  });
 
 //Menu-Icon
 
