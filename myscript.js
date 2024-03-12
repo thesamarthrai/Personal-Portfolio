@@ -2,12 +2,12 @@
 const tl = gsap.timeline();
 
 tl.to("body", {
-  overflow: "hidden"
+  overflow: "hidden",
 })
   .to(".preloader .text-container", {
     duration: 0,
     opacity: 1,
-    ease: "Power3.easeOut"
+    ease: "Power3.easeOut",
   })
   .from(".preloader .text-container h1", {
     duration: 1.5,
@@ -15,88 +15,88 @@ tl.to("body", {
     y: 70,
     skewY: 10,
     stagger: 0.4,
-    ease: "Power3.easeOut"
+    ease: "Power3.easeOut",
   })
   .to(".preloader .text-container h1", {
     duration: 1.2,
     y: 70,
     skewY: -20,
     stagger: 0.2,
-    ease: "Power3.easeOut"
+    ease: "Power3.easeOut",
   })
   .to(".preloader", {
     duration: 1.5,
     height: "0vh",
-    ease: "Power3.easeOut"
+    ease: "Power3.easeOut",
   })
   .to(
     "body",
     {
-      overflow: "auto"
+      overflow: "auto",
     },
     "-=2"
   )
   .to(".preloader", {
-    display: "none"
+    display: "none",
   });
 
-//Play -Pause button 
+//Play -Pause button
 const dictationText = document.getElementById("dictation-text");
-  const playButton = document.querySelector('.bx.bx-play');
-  const pauseButton = document.querySelector('.bx.bx-pause');
+const playButton = document.querySelector(".bx.bx-play");
+const pauseButton = document.querySelector(".bx.bx-pause");
 
-  let isPlaying = false;
+let isPlaying = false;
 
-  playButton.addEventListener('click', () => {
-    if (!isPlaying) {
-      responsiveVoice.speak(dictationText.textContent, {
-        pitch: 1,
-        rate: 1,  
-        volume: 1, 
-        voice: 'Matthew' 
-      });
-      isPlaying = true;
-    }
-  });
+playButton.addEventListener("click", () => {
+  if (!isPlaying) {
+    responsiveVoice.speak(dictationText.textContent, {
+      pitch: 1,
+      rate: 1,
+      volume: 1,
+      voice: "Matthew",
+    });
+    isPlaying = true;
+  }
+});
 
-  pauseButton.addEventListener('click', () => {
-    if (isPlaying) {
-      responsiveVoice.pause();
-      isPlaying = false;
-    }
-  });
-
+pauseButton.addEventListener("click", () => {
+  if (isPlaying) {
+    responsiveVoice.pause();
+    isPlaying = false;
+  }
+});
 
 //Menu-Icon
 
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+  menuIcon.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
 
 //Scroll Section JS
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
-
 window.onscroll = () => {
-  sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 100;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute("id");
-    
-        if (top >= offset && top < offset + height) {
-          navLinks.forEach(links => {
-            links.classList.remove("active");
-            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-          });
-        }
+  sections.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 100;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
       });
+    }
+  });
   let header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 100);
 };
@@ -155,16 +155,18 @@ setInterval(function () {
 // Initialize the slider
 showSlides(slideIndex);
 
-
 // ##############################################################################################################
-
 
 // Fullstack Developer
 const textArray = [
-  "Full Stack developer","Software Engineer","Database Manager","Compiler Designer","Web Developer"," and Coder"
+  "Full Stack developer",
+  "Software Engineer",
+  "Database Manager",
+  "Compiler Designer",
+  "Web Developer",
+  " and Coder",
   // Add more strings as needed
 ];
-
 
 // Initialize variables
 let typeJsText = document.querySelector(".animatedText1");
@@ -208,14 +210,13 @@ function typeJs() {
 // Set an interval to call the typeJs function
 setInterval(typeJs, 100); // You can adjust the animation speed as needed
 
-
 // Typewriting JS
 
 class TypeWriter {
   constructor(txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;
-    this.txt = '';
+    this.txt = "";
     this.wordIndex = 0;
     this.wait = parseInt(wait, 8);
     this.type();
@@ -250,7 +251,7 @@ class TypeWriter {
       typeSpeed = this.wait;
       // Set delete to true
       this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
+    } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
       // Move to next word
       this.wordIndex++;
@@ -266,13 +267,13 @@ class TypeWriter {
 }
 
 // Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener("DOMContentLoaded", init);
 
 // Init App
 function init() {
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-words'));
-  const wait = txtElement.getAttribute('data-wait');
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-words"));
+  const wait = txtElement.getAttribute("data-wait");
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
