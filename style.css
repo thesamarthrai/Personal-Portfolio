@@ -311,6 +311,25 @@ section {
     width: 100%;
 }
 
+.bx-play:before {
+    content: "\ebbd";
+    position: absolute;
+    top: -6px;
+    font-size: 6rem;
+    width: 0px;
+    cursor: pointer;
+}
+
+.bx-pause:before {
+    content: "\ebae";
+    position: absolute;
+    font-size: 7rem;
+    width: 0px;
+    top: -1rem;
+    left: 38rem;
+    cursor: pointer;
+}
+
 #back-avtar {
     bottom: 14rem;
     border-radius: 50%;
