@@ -1970,12 +1970,12 @@ section {
 .home-img-hover {
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: 251px;
     width: 30%;
     height: 100%;
     background: transparent;
     transition: 3s;
-    opacity: .8;
+    opacity: 0.3;
 }
 
 .home-img-hover:hover {
