@@ -40,6 +40,32 @@ tl.to("body", {
     display: "none"
   });
 
+//Play -Pause button 
+const dictationText = document.getElementById("dictation-text");
+  const playButton = document.querySelector('.bx.bx-play');
+  const pauseButton = document.querySelector('.bx.bx-pause');
+
+  let isPlaying = false;
+
+  playButton.addEventListener('click', () => {
+    if (!isPlaying) {
+      responsiveVoice.speak(dictationText.textContent, {
+        pitch: 1,
+        rate: 1,  
+        volume: 1, 
+        voice: 'Matthew' 
+      });
+      isPlaying = true;
+    }
+  });
+
+  pauseButton.addEventListener('click', () => {
+    if (isPlaying) {
+      responsiveVoice.pause();
+      isPlaying = false;
+    }
+  });
+
 
 //Menu-Icon
 
